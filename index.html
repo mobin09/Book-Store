@@ -19,34 +19,36 @@
             <div class="card-header">
                 <h2 class="card-title">Book_Store</h2>
             </div>
-            <div class="card-body">
-                <form>
+            <div class="card-body" id="body-of-card">
+                <form id="book-form">
                     <div class="form-group">
                         <label for="bookTitle">Book Title</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="title">
                     </div>
                     <div class="form-group">
                         <label for="author">Author</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="author">
                     </div>
                     <div class="form-group">
                         <label for="isbn">ISBN</label>
-                        <input type="number" class="form-control">
+                        <input type="text" class="form-control" id="isbn">
                     </div>
                     <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>
                 <hr>
-                <div class="row">
-                    <div class="col-4">
-                        <h5>Title</h5>
-                    </div>
-                    <div class="col-4">
-                        <h5>Author</h5>
-                    </div>
-                    <div class="col-4">
-                        <h5>ISBN</h5>
-                    </div>
-                </div>
+               <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Title</th>
+                          <th>Author</th>
+                          <th>ISBN</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody id="book-list"> 
+
+                  </tbody>
+               </table>
             </div>
         </div>
     </div>
@@ -67,6 +69,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="app.js "></script>
 </body>
 
 </html>
