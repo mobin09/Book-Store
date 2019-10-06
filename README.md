@@ -16,7 +16,7 @@ Technology Which i used
    ![](https://raw.githubusercontent.com/mobink09/book_store/master/img/desktopview.png)
 
    2) Mobile View
-
-    ![](https://raw.githubusercontent.com/mobink09/book_store/master/img/phonelook.png)
-
+   
+   ![](https://raw.githubusercontent.com/mobink09/book_store/master/img/phonelook.png)
+      
   
