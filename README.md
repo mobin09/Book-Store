@@ -7,5 +7,6 @@ Technology Which i used
   3) custom css
   4) HTML
   5) browser inbuilt local storage tools
+  6) it contains ES5 and ES6 named of app.js and appes6.js respectively
 
   

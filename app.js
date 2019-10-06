@@ -110,7 +110,7 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
      }
 
      else{
-        ui.addBookToList(book)
+        ui.addBookToList(book);
         // show success
         ui.addBookAlerted('Book Added', 'bg-success text-white');
        
