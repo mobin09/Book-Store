@@ -48,7 +48,7 @@ UI.prototype.addBookToList = function (book) {
   <td>${book.title}</td>
   <td>${book.author}</td>
   <td>${book.isbn}</td>
-  <td><a href = "#" class = "text-danger close" id="remove">X</a></td>
+  <td><a href = "#" class = "text-danger">X</a></td>
   `;
   list.appendChild(row);
 }
@@ -78,7 +78,16 @@ UI.prototype.clearFields = function(){
 }
 
 
-//Event Listener
+// delete books
+UI.prototype.deleteBook = function(target){
+    if(target.className === 'text-danger'){
+       target.parentElement.parentElement.remove();
+       // this function going to bottom of page
+       deleteAlert('Deleted Book', 'bg-success text-white');
+    }
+}
+  
+//Event Listener to add book
 document.getElementById('book-form').addEventListener('submit', function (e) {
     // get form value
     const titleInput = document.getElementById('title').value;
@@ -112,11 +121,35 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
 });
 
 
+//addEventListener to delete books
+document.getElementById('book-list').addEventListener('click', function(e){
+   
+   const ui = new UI();
+   ui.deleteBook(e.target);
+   // show alert
+//    ui.addBookAlerted('Book Removed', 'bg-success text-white');
+
+    e.preventDefault();
+});
 
 
 
 
 
+function deleteAlert(message, className){
+    const div = document.createElement('div');
+    div.className = `alert ${className}`
+    div.appendChild(document.createTextNode(message));
+  
+ // get parent
+ const cardBody = document.getElementById('body-of-card');
+ const form = document.getElementById('book-form');
+ cardBody.insertBefore(div, form);
+ 
+ setTimeout(function(){
+   document.querySelector('.bg-success').remove();
+ }, 3000);
+}
 
 
 
