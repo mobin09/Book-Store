@@ -9,8 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <title>Book_Store</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #007991, #78ffd6);
+        }
+    </style>
 </head>
 
 <body>
@@ -33,22 +37,27 @@
                         <label for="isbn">ISBN</label>
                         <input type="text" class="form-control" id="isbn">
                     </div>
-                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
                 </form>
                 <hr>
-               <table class="table">
-                  <thead>
-                      <tr>
-                          <th>Title</th>
-                          <th>Author</th>
-                          <th>ISBN</th>
-                          <th></th>
-                      </tr>
-                  </thead>
-                  <tbody id="book-list"> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>ISBN</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-list">
 
-                  </tbody>
-               </table>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer bg-dark">
+                <p class="card-text text-center text-white">
+                    <a href="https://github.com/mobink09" class="text-white">codeWithMobin</a>
+                </p>
             </div>
         </div>
     </div>
